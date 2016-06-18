@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="xgen.mobiroo.com.mobirooapp.DetailActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="New Text"
+            android:id="@+id/fullname_tv"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="New Text"
+            android:id="@+id/shortname_tv"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/city"
+            android:id="@+id/citytitle_tv"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="New Text"
+            android:id="@+id/cityname_tv"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_start"
+            android:id="@+id/startcaculate_btn"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/result"
+            android:id="@+id/result_tv"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="......"
+            android:id="@+id/result_caculated_tv"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</RelativeLayout>
