@@ -16,6 +16,7 @@ public class DetailActivity extends AppCompatActivity {
     private Button m_btnStart;
     private TextView m_tvFullName,m_tvShortName,m_tvCityName,m_tvResult;
     DoingStateReceiver m_StateReceiver;
+    LocalBroadcastManager mLocalBroadcastManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,11 @@ public class DetailActivity extends AppCompatActivity {
         BroadcastRegister();
 
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unRegisterLocalBroadcastReceiver();
+    }
 
     private void BroadcastRegister(){
         IntentFilter statusIntentFilter = new IntentFilter(Constants.BROADCAST_ACTION);
@@ -55,8 +61,17 @@ public class DetailActivity extends AppCompatActivity {
         statusIntentFilter.addCategory(Intent.CATEGORY_DEFAULT);
         m_StateReceiver = new DoingStateReceiver();
         // Registers the DownloadStateReceiver and its intent filters
-        LocalBroadcastManager.getInstance(this).registerReceiver(m_StateReceiver, statusIntentFilter);
+        mLocalBroadcastManager = LocalBroadcastManager.getInstance(this);
+        mLocalBroadcastManager.registerReceiver(m_StateReceiver, statusIntentFilter);
 
+    }
+
+    private void unRegisterLocalBroadcastReceiver(){
+        if (mLocalBroadcastManager!=null) {
+            if (m_StateReceiver!=null) {
+                mLocalBroadcastManager.unregisterReceiver(m_StateReceiver);
+            }
+        }
     }
 
     private class DoingStateReceiver extends BroadcastReceiver {
