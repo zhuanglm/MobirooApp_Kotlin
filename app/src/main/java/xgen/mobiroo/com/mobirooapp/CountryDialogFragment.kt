@@ -2,6 +2,7 @@ package xgen.mobiroo.com.mobirooapp
 
 import android.app.Activity
 import android.app.DialogFragment
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,17 +23,16 @@ class CountryDialogFragment : DialogFragment() {
         fun onBtnClicked(flag: Boolean)
     }
 
-    override fun onAttach(activity: Activity) {
-        super.onAttach(activity)
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
 
-        m_ReturnListener = activity as DialogReturn
+        m_ReturnListener = context as DialogReturn
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         val view = inflater.inflate(R.layout.fragment_dialog, container)
-
 
         m_btnStart = view.findViewById(R.id.btn_start) as Button
         m_btnCancel = view.findViewById(R.id.btn_cancel) as Button

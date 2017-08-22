@@ -30,7 +30,6 @@ class DashboardActivity : AppCompatActivity(), CountryDialogFragment.DialogRetur
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intent = intent
         val lang = intent.getStringExtra("lang")
         if (lang != null) {
             Log.i("language", lang)
