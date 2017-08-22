@@ -7,7 +7,7 @@ public class CapitalRequest extends RequestBase<CapitalResponse> {
 
     @Override
     public String getUri() {
-        return Constants.COUNTRY_CAPITAL;
+        return Constants.INSTANCE.getCOUNTRY_CAPITAL();
     }
 
     @Override

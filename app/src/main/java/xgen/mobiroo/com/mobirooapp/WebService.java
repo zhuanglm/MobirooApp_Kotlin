@@ -67,8 +67,8 @@ public class WebService {
 
            connection = (HttpURLConnection) url.openConnection();
 
-           connection.setConnectTimeout((int) (1000F * Constants.WebServiceConnectionTimeout));
-           connection.setReadTimeout((int) (1000F * Constants.WebServiceReadTimeout));
+           connection.setConnectTimeout((int) (1000F * Constants.INSTANCE.getWebServiceConnectionTimeout()));
+           connection.setReadTimeout((int) (1000F * Constants.INSTANCE.getWebServiceReadTimeout()));
            connection.setDoOutput(true);
 
            connection.setRequestProperty("Accept", "Application/JSON");

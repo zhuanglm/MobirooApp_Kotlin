@@ -7,7 +7,7 @@ public class CountryRequest extends RequestBase<CountryResponse> {
 
     @Override
     public String getUri() {
-        return Constants.COUNTRY_NAME;
+        return Constants.INSTANCE.getCOUNTRY_NAME();
     }
 
     @Override
