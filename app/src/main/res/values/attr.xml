@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="i_btn" format="reference" />
+    <attr name="i_color" format="color" />
+    <attr name="text" format="string" />
+    <attr name="text_size" format="dimension" />
+
+    <declare-styleable name="ChangeColorIconView">
+        <attr name="i_btn" />
+        <attr name="i_color" />
+        <attr name="text" />
+        <attr name="text_size" />
+    </declare-styleable>
+</resources>

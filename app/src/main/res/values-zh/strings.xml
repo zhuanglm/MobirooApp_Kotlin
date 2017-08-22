@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MobirooApp</string>
+    <string name="title">国家列表</string>
+    <string name="btn_country">国家列表</string>
+    <string name="test">测试</string>
+</resources>

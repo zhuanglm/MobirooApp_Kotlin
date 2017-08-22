@@ -10,5 +10,7 @@
     <string name="empty_list">downloading...</string>
     <string name="city">Capital City</string>
     <string name="result">Caculated Result</string>
+    <string name="btn_country">COUNTRIES</string>
+    <string name="test">test</string>
 
 </resources>
